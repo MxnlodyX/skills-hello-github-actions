@@ -1,6 +1,16 @@
 name: Post welcome comment
+
 on:
   pull_request:
     types: [opened]
+
 permissions:
   pull-requests: write
+
+jobs:
+  post-welcome-comment:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Thanks message
+        run: echo "👋 Thanks for opening this pull request!"
